@@ -1,0 +1,33 @@
+/* This colour scheme matches that of the SUZIE terminals in the game. */
+
+body {
+    font-family: sans-serif;
+    color: #FFFF9C;
+    background-color: #000000;
+    width: 32em;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 2em;
+}
+
+a {
+    color: #9C6331;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #63FF63;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+html {
+    background-color: #000000;
+    background-image: url("background.png");
+    background-position: center top;
+    background-repeat: repeat;
+}

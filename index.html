@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sentient Database Entries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<h1>Sentient Database Entries</h1>
+
+<p>
+    <a href="https://en.wikipedia.org/wiki/Sentient_(video_game)">Sentient</a> is an ambitious video game developed by Psygnosis and released in 1997. Set on a disaster-prone space station orbiting a star, the game provides the player with substantial freedom while endowing non-player characters with a level of agency that was uncommon for the time. Boasting 12 endings, tens of thousands of lines of NPC dialogue, and a story with some decidedly strange twists and turns, Sentient is a game with much to discover. Unfortunately, its controls are awkward and the extent to which it leaves the player to their own devices is perhaps excessive. Together, <a href="http://www.hardcoregaming101.net/sentient/sentient.htm">this article</a> and <a href="https://obscuritory.com/adventure/sentient/">this article</a> provide an excellent overview of the game.
+</p>
+
+<p>
+    One feature of Sentient is an extensive database filled with largely-superfluous information about the game's characters and setting. This database is accessed through "S.U.Z.I.E. terminals" (S.U.Z.I.E. being the station's on-board artificial intelligence) scattered around the station, all of which display an animation resembling the "Mystify Your Mind" screensaver included with Windows 95 while not in use.
+</p>
+
+<p>
+    <img src="sentient-screensaver.gif" width="320" height="240" />
+</p>
+
+<p>
+    The contents of the database are stored in the <tt>SUZIE_HYP</tt> section of the <tt>MISC.VSR</tt> file (at least in the Windows release of the game) and the format is fairly simple. I wrote <a href="https://github.com/CahootsMalone/sentient-stuff/blob/main/scripts/sentient-misc-database-text-parser.py">a small script</a> to parse this file and save each database entry as an HTML file; the resulting collection of pages is presented here.
+</p>
+
+<h2>Viewing the database entries</h2>
+
+<p>
+    For an experience closest to browsing the database in-game, start with the <a href="database/0.html">database main page</a> and follow the links.
+</p>
+
+<p>
+    <img src="sentient-database-main-screen.png" width="320" height="240" />
+</p>
+
+<p>
+    In-game, some links point to different versions of the destination entry depending on the player's security clearance: higher clearance levels yield expanded entries with additional details (typically related to the nefarious machinations of the "New Hegemony") or completely new information (e.g., higher-clearance personnel records include commentary by the station's undercover political officer). Each link may have up to four destinations, presumably corresponding to four clearance levels (although it only appears possible to obtain three in the game). On this site, links that vary with clearance are broken into multiple adjacent links, each indicating the clearance levels for which its destination is available. Some examples:
+    <ul>
+        <li>
+            "<a href="database/379.html">Mason Garrilac L1</a> <a href="database/380.html">L2</a> <a href="database/381.html">L3/L4</a>" indicates that there are three versions of the database entry on Chief Engineer Garrilac: one for level 1, one for level 2, and one used for both levels 3 and 4.
+        </li>
+        <li>
+            "<a href="database/580.html">Articles of Domain L3/L4</a>" indicates that there is a single entry describing the Articles of Domain, but that this entry is only available with a clearance level of 3 or 4 (at lower clearance levels, no link would be present).
+        </li>
+    </ul>
+</p>
+
+<p>
+    <img src="sentient-database-entry.png" width="320" height="240" />
+</p>
+
+<p>
+    An easier way to browse the database is to use <a href="database/index.html">the index of all entries</a>, which includes those that aren't accessible in-game because no other entries link to them (the in-game database doesn't include an index). A list of only those entries to which no links exist is available <a href="database/unlinked.html">here</a>.
+</p>
+
+<h2>Differences between this site and the game</h2>
+
+<p>
+    Please note that, while an accurate reflection of the contents of the <tt>MISC.VSR</tt> file, the text-based presentation of the Icarus Machines, Station Plans, and Power Priority sections of the database on this site differs substantially from their representations in-game:
+    <ul>
+        <li>
+            The Icarus Machines section takes the form of a large diagram of machines grouped by parent subsystem that indicates each machine's status (blue if undamaged, purple if damaged, red if broken, or brown if rendered inoperative by a broken dependency) and dependencies. The player can view details for each machine, which include a description of it as well as its current efficiency (reduced if the machine or its dependencies are damaged) and damage.<br />
+            <img src="sentient-icarus-machines.gif" width="320" height="240" />
+        </li>
+        <li>
+            The Station Plans section is a set of 3D maps of each deck of the station. When viewing a given deck, the player can highlight individual rooms to view their name and description. This is a helpful feature given the confusing layout of the station, but the omission of room numbers is unfortunate, as is the fact that maps are rendered directly in front of the terminal screen.<br />
+            <img src="sentient-database-map.png" width="320" height="240" />
+        </li>
+        <li>
+            The Power Priority section (which simply contains the phrase "dummy screen" in the <tt>MISC.VSR</tt> file) allows the player to reorder the station's subsystems to specify which systems should be prioritized in the event of a power shortage.<br />
+            <img src="sentient-database-power-priority.png" width="320" height="240" />
+        </li>
+    </ul>
+</p>
+
+<h2>Writing credits</h2>
+
+<p>
+    Unfortunately it's hard to know who wrote these database entries. Neither Sentient's credits cutscene (which can be watched on YouTube <a href="https://www.youtube.com/watch?v=ViHxICAFm-A">here</a>) nor its manual explicitly identify any writing staff. In <a href="https://web.archive.org/web/20100218134625/http://thegamingliberty.com/index.php/2010/01/07/sentient-we-turn-to-the-skies/">this interview</a> with three members of the development team from 2010, Colin Burges (listed in the "Programming" section of the credits) states that some of the writing was outsourced to an American company, but that most of it had to be rewritten by "Julian [Hicks] and co" (Julian Hicks is listed in the "Production" section of the credits).
+</p>
+
+<p>
+    <img src="sentient-gribble.png" width="320" height="240" />
+</p>
+
+</body>
+
+</html>
